@@ -1,5 +1,3 @@
-import React from "react";
-
 const Header = ({ activeSection, onSectionChange }) => {
   return (
     <header className="bg-white/10 backdrop-blur-md border-b border-white/20">
