@@ -6,7 +6,7 @@ const Header = ({ activeSection, onSectionChange }) => {
           <h1 className="text-2xl font-bold text-white">🎓 Academia Pro</h1>
 
           <nav className="flex space-x-4">
-            {["home", "courses", "about"].map((section) => (
+            {["home", "students", "courses", "about"].map((section) => (
               <button
                 key={section}
                 onClick={() => onSectionChange(section)}
@@ -18,6 +18,8 @@ const Header = ({ activeSection, onSectionChange }) => {
               >
                 {section === "home"
                   ? "Inicio"
+                  : section === "students"
+                  ? "Estudiantes"
                   : section === "courses"
                   ? "Cursos"
                   : "Nosotros"}

@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import Courses from "./components/courses/Courses";
 import About from "./components/about/About";
 import ContactForm from "./components/shared/ContactForm";
+import StudentManager from "./components/students/StudentManager";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -29,6 +30,8 @@ function App() {
         {activeSection === "home" && (
           <Home onToggleContact={handleToggleContact} />
         )}
+
+        {activeSection === "students" && <StudentManager />}
 
         {activeSection === "courses" && <Courses />}
 
