@@ -1,5 +1,3 @@
-import React from "react";
-
 const Header = ({ activeSection, onSectionChange }) => {
   return (
     <header className="bg-white/10 backdrop-blur-md border-b border-white/20">
@@ -8,7 +6,7 @@ const Header = ({ activeSection, onSectionChange }) => {
           <h1 className="text-2xl font-bold text-white">🎓 Academia Pro</h1>
 
           <nav className="flex space-x-4">
-            {["home", "courses", "about"].map((section) => (
+            {["home", "students", "courses", "about"].map((section) => (
               <button
                 key={section}
                 onClick={() => onSectionChange(section)}
@@ -20,6 +18,8 @@ const Header = ({ activeSection, onSectionChange }) => {
               >
                 {section === "home"
                   ? "Inicio"
+                  : section === "students"
+                  ? "Estudiantes"
                   : section === "courses"
                   ? "Cursos"
                   : "Nosotros"}

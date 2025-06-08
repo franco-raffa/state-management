@@ -5,13 +5,10 @@ import Home from "./components/home/Home";
 import Courses from "./components/courses/Courses";
 import About from "./components/about/About";
 import ContactForm from "./components/shared/ContactForm";
+import StudentManager from "./components/students/StudentManager";
 
-// Componente principal de la academia
 function App() {
-  // Estado para controlar qué sección está activa
   const [activeSection, setActiveSection] = useState("home");
-
-  // Estado para mostrar/ocultar el formulario de contacto
   const [showContactForm, setShowContactForm] = useState(false);
 
   const handleSectionChange = (section) => {
@@ -33,6 +30,8 @@ function App() {
         {activeSection === "home" && (
           <Home onToggleContact={handleToggleContact} />
         )}
+
+        {activeSection === "students" && <StudentManager />}
 
         {activeSection === "courses" && <Courses />}
 

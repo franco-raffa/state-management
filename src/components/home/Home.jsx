@@ -1,4 +1,3 @@
-import React from "react";
 import StudentCounter from "./StudentCounter";
 
 const Home = ({ onToggleContact }) => {
