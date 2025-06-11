@@ -6,6 +6,7 @@ import Courses from "./components/courses/Courses";
 import About from "./components/about/About";
 import ContactForm from "./components/shared/ContactForm";
 import StudentManager from "./components/students/StudentManager";
+import UpdatingTask from "./components/updating-task/UpdatingTask";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -36,6 +37,8 @@ function App() {
         {activeSection === "courses" && <Courses />}
 
         {activeSection === "about" && <About />}
+
+        {activeSection === "updating-task" && <UpdatingTask />}
 
         {showContactForm && <ContactForm onClose={handleToggleContact} />}
       </main>
