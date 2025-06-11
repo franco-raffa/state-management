@@ -7,6 +7,7 @@ import About from "./components/about/About";
 import ContactForm from "./components/shared/ContactForm";
 import StudentManager from "./components/students/StudentManager";
 import UpdatingTask from "./components/updating-task/UpdatingTask";
+import ShoppingApp from "./components/shop/ShoppingApp";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -33,6 +34,8 @@ function App() {
         )}
 
         {activeSection === "students" && <StudentManager />}
+
+        {activeSection === "shop" && <ShoppingApp />}
 
         {activeSection === "courses" && <Courses />}
 

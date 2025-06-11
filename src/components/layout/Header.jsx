@@ -6,29 +6,36 @@ const Header = ({ activeSection, onSectionChange }) => {
           <h1 className="text-2xl font-bold text-white">🎓 Academia Pro</h1>
 
           <nav className="flex space-x-4">
-            {["home", "students", "courses", "updating-task", "about"].map(
-              (section) => (
-                <button
-                  key={section}
-                  onClick={() => onSectionChange(section)}
-                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                    activeSection === section
-                      ? "bg-white text-purple-800 font-semibold"
-                      : "text-white hover:bg-white/20"
-                  }`}
-                >
-                  {section === "home"
-                    ? "Inicio"
-                    : section === "students"
-                    ? "Estudiantes"
-                    : section === "courses"
-                    ? "Cursos"
-                    : section === "updating-task"
-                    ? "Actualizar Tareas"
-                    : "Nosotros"}
-                </button>
-              )
-            )}
+            {[
+              "home",
+              "students",
+              "shop",
+              "courses",
+              "updating-task",
+              "about",
+            ].map((section) => (
+              <button
+                key={section}
+                onClick={() => onSectionChange(section)}
+                className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                  activeSection === section
+                    ? "bg-white text-purple-800 font-semibold"
+                    : "text-white hover:bg-white/20"
+                }`}
+              >
+                {section === "home"
+                  ? "Inicio"
+                  : section === "students"
+                  ? "Estudiantes"
+                  : section === "shop"
+                  ? "Tienda"
+                  : section === "courses"
+                  ? "Cursos"
+                  : section === "updating-task"
+                  ? "Actualizar Tareas"
+                  : "Nosotros"}
+              </button>
+            ))}
           </nav>
         </div>
       </div>
